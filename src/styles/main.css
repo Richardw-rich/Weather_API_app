@@ -1,0 +1,124 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: "Roboto Slab", sans-serif, serif;
+}
+
+:root {
+  --primary: rgb(9, 4, 70);
+  --secondary: rgb(204, 201, 220);
+  --tertiary: rgb(40, 102, 110);
+  --tertiary-lighter: rgb(55, 134, 144);
+  --white: rgb(244, 248, 231);
+  --searchbar: rgb(209, 255, 198);
+}
+
+#header {
+  background-color: var(--primary);
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--searchbar);
+  font-size: 3.5rem;
+  font-weight: 500;
+  box-shadow: 10px 0px 10px rgba(0, 0, 0, 0.5);
+
+}
+
+#body {
+  height: 80vh;
+  background-color: var(--secondary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#container {
+  width: 400px;
+  height: 500px;
+  background-color: var(--primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+#container > * {
+  margin: 5px;
+  color: var(--searchbar);
+  padding: 5px;
+  font-size: 1.5;
+  border: 1px solid black;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#city-name {
+  color: var(--searchbar);
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+#temp,
+#feels-like,
+#humidity,
+#wind {
+  color: var(--white);
+}
+
+#text {
+  border: none;
+  border-radius: 5px;
+  background-color: var(--tertiary);
+  color: black;
+  padding: 5px;
+  transition: background-color 0.3s box-shadow 0.3s;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 5px;
+}
+
+#text:focus {
+  outline: none;
+  box-shadow: none;
+  border: none;
+  background-color: var(--tertiary-lighter);
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+#text::placeholder {
+  color: black;
+  font-weight: 200;
+  
+}
+
+#submit {
+  background-color: #4caf50;
+  color: black;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  transition: background-color 0.3s;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 5px;
+  border-radius: 5px;
+}
+
+#submit:hover {
+  background-color: #58d68d;
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+#submit:active {
+  background-color: #abebc6;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
